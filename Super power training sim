@@ -1,0 +1,240 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "meme hub | SPTS: Origin | (INCOMPLETE)", HidePremium = false, SaveConfig = true, ConfigFolder = "SPTS", IntroText = "SPTS"})
+
+-- values
+getgenv().WSV = true
+getgenv().FSV = true
+getgenv().BTV = true
+getgenv().JPV = true
+getgenv().PSV = true
+
+-- functions
+function WS()
+    while WSV == true do
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"Add_MS_Request"})
+wait()
+    end
+end
+
+function FS()
+    while FSV == true do
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"Add_FS_Request"})
+wait()
+    end
+end
+
+function BT()
+    while BTV == true do
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"+BT1"})
+wait()
+    end
+end
+
+function JP()
+    while JPV == true do
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"Add_JF_Request"})
+wait()
+    end
+end
+
+
+function equipweight0()
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",0})
+end
+
+function equipweight1()
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",1})
+end
+
+function equipweight2()
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",2})
+end
+
+function equipweight3()
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",3})
+end
+
+function equipweight4()
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",4})
+end
+
+function PS()
+    Weapon = "Meditate"
+    while PSV == true do
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(5729, 10827, 20931)
+wait(0.1)
+pl.CFrame = location
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))
+  end
+end
+
+function FS1()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(407, 249, 978)
+wait(0.1)
+pl.CFrame = location
+end
+
+function FS2()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2276, 1943, 1052)
+wait(0.1)
+pl.CFrame = location
+end
+
+function FS3()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1378, 9270, 1658)
+wait(0.1)
+pl.CFrame = location
+end
+
+
+
+function FS4()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-369, 15732, -28)
+wait(0.1)
+pl.CFrame = location
+end
+
+
+
+
+-- tabs and shit
+local MTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+MTab:AddToggle({
+	Name = "Autofarm Walkspeed",
+	Default = false,
+	Callback = function(Value)
+		getgenv().WSV = Value
+    WS()
+	end    
+})
+
+MTab:AddToggle({
+	Name = "Autofarm Fist",
+	Default = false,
+	Callback = function(Value)
+		getgenv().FSV = Value
+    FS()
+	end    
+})
+
+MTab:AddToggle({
+	Name = "Autofarm Body Toughness",
+	Default = false,
+	Callback = function(Value)
+		getgenv().BTV = Value
+    BT()
+	end    
+})
+
+MTab:AddToggle({
+	Name = "Autofarm JumpPower",
+	Default = false,
+	Callback = function(Value)
+		getgenv().JPV = Value
+    JP()
+	end    
+})
+
+MTab:AddToggle({
+	Name = "Autofarm Psychic",
+	Default = false,
+	Callback = function(Value)
+		getgenv().PSV = Value
+    PS()
+	end    
+})
+
+local WTab = Window:MakeTab({
+	Name = "Weights",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+WTab:AddButton({
+	Name = "Unequip Weight",
+	Callback = function()
+      		equipweight0()
+  	end    
+})
+
+WTab:AddButton({
+	Name = "100LB Weight",
+	Callback = function()
+      		equipweight1()
+  	end    
+})
+
+WTab:AddButton({
+	Name = "1 Ton Weight",
+	Callback = function()
+      		equipweight2()
+  	end    
+})
+
+WTab:AddButton({
+	Name = "10 Ton Weight",
+	Callback = function()
+      		equipweight3()
+  	end    
+})
+
+WTab:AddButton({
+	Name = "100 Ton Weight",
+	Callback = function()
+      		equipweight4()
+  	end    
+})
+
+local TelTab = Window:MakeTab({
+	Name = "Fist Strength Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+TelTab:AddButton({
+	Name = "100 Fist Strength",
+	Callback = function()
+      		 FS1()
+  	end    
+})
+
+TelTab:AddButton({
+	Name = "100k Fist Strength",
+	Callback = function()
+      		 FS2()
+  	end    
+})
+
+
+TelTab:AddButton({
+	Name = "100B Fist Strength",
+	Callback = function()
+      		 FS3()
+  	end    
+})
+
+TelTab:AddButton({
+	Name = "10T Fist Strength",
+	Callback = function()
+      		 FS4()
+  	end    
+})
+
+
+
+
+
+
+
+
+OrionLib:Init()
