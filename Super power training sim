@@ -85,6 +85,14 @@ end
 
 function FS3()
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1177, 4789, -2293)
+wait(0.1)
+pl.CFrame = location
+end
+
+
+function FS4()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 local location = CFrame.new(1378, 9270, 1658)
 wait(0.1)
 pl.CFrame = location
@@ -92,14 +100,76 @@ end
 
 
 
-function FS4()
+function FS5()
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 local location = CFrame.new(-369, 15732, -28)
 wait(0.1)
 pl.CFrame = location
 end
 
+function BT1()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(372, 249, -441)
+wait(0.1)
+pl.CFrame = location
+end
 
+function BT2()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(359, 263, -499)
+wait(0.1)
+pl.CFrame = location
+end
+
+function BT3()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1642, 258, 2245)
+wait(0.1)
+pl.CFrame = location
+end
+
+function BT4()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2297, 977, 1071)
+wait(0.1)
+pl.CFrame = location
+end
+
+function BT5()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2035, 712, -1874)
+wait(0.1)
+pl.CFrame = location
+end
+
+function PP1()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2534, 5486, -535)
+wait(0.1)
+pl.CFrame = location
+end
+
+function PP2()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2569, 5501, -441)
+wait(0.1)
+pl.CFrame = location
+end
+
+function PP3()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2584, 5516, -506)
+wait(0.1)
+pl.CFrame = location
+end
+
+function Keyboard()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end
+
+function Infiniteyield()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end
 
 
 -- tabs and shit
@@ -215,23 +285,122 @@ TelTab:AddButton({
   	end    
 })
 
-
 TelTab:AddButton({
-	Name = "100B Fist Strength",
+	Name = "1B Fist Strength",
 	Callback = function()
       		 FS3()
   	end    
 })
 
 TelTab:AddButton({
-	Name = "10T Fist Strength",
+	Name = "100B Fist Strength",
 	Callback = function()
       		 FS4()
   	end    
 })
 
+TelTab:AddButton({
+	Name = "10T Fist Strength",
+	Callback = function()
+      		 FS5()
+  	end    
+})
 
+local Tel2Tab = Window:MakeTab({
+	Name = "Body Toughness Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
+Tel2Tab:AddButton({
+	Name = "100 Body Toughness",
+	Callback = function()
+      		 BT1()
+  	end    
+})
+
+Tel2Tab:AddButton({
+	Name = "10k Body Toughness",
+	Callback = function()
+      		 BT2()
+  	end    
+})
+
+Tel2Tab:AddButton({
+	Name = "100k Body Toughness",
+	Callback = function()
+      		 BT3()
+  	end    
+})
+
+Tel2Tab:AddButton({
+	Name = "1M Body Toughness",
+	Callback = function()
+      		 BT4()
+  	end    
+})
+
+Tel2Tab:AddButton({
+	Name = "10M Body Toughness",
+	Callback = function()
+      		 BT5()
+  	end    
+})
+
+local Tel3Tab = Window:MakeTab({
+	Name = "Psychic Power Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tel3Tab:AddButton({
+	Name = "1M Psychic Power",
+	Callback = function()
+      		 PP1()
+  	end    
+})
+
+Tel3Tab:AddButton({
+	Name = "1B Psychic Power",
+	Callback = function()
+      		 PP2()
+  	end    
+})
+
+Tel3Tab:AddButton({
+	Name = "1T Psychic Power",
+	Callback = function()
+      		 PP3()
+  	end    
+})
+
+local MiTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+MiTab:AddButton({
+	Name = "Keyboard",
+	Callback = function()
+      		 Keyboard()
+  	end    
+})
+
+MiTab:AddButton({
+	Name = "Infinite yield",
+	Callback = function()
+      		 Infiniteyield()
+  	end    
+})
+
+local CTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+CTab:AddLabel("made by silence santa#6534")
 
 
 
