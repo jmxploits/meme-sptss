@@ -163,6 +163,14 @@ wait(0.1)
 pl.CFrame = location
 end
 
+function PP4()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2548, 5412, -488)
+wait(0.1)
+pl.CFrame = location
+end
+
+
 function Keyboard()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
 end
@@ -371,6 +379,13 @@ Tel3Tab:AddButton({
 	Name = "1T Psychic Power",
 	Callback = function()
       		 PP3()
+  	end    
+})
+
+Tel3Tab:AddButton({
+	Name = "1QA Psychic Power",
+	Callback = function()
+      		 PP4()
   	end    
 })
 
