@@ -61,27 +61,6 @@ wait(0.0000000000000000000000000000000000000000001)
     end
 end
 
-
-function equipweight0()
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",0})
-end
-
-function equipweight1()
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",1})
-end
-
-function equipweight2()
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",2})
-end
-
-function equipweight3()
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",3})
-end
-
-function equipweight4()
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Request",4})
-end
-
 function PS()
     while PSV == true do
 local args = {
@@ -256,47 +235,6 @@ MTab:AddToggle({
 		getgenv().PSV = Value
     PS()
 	end    
-})
-
-local WTab = Window:MakeTab({
-	Name = "Weights",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-WTab:AddButton({
-	Name = "Unequip Weight",
-	Callback = function()
-      		equipweight0()
-  	end    
-})
-
-WTab:AddButton({
-	Name = "100LB Weight",
-	Callback = function()
-      		equipweight1()
-  	end    
-})
-
-WTab:AddButton({
-	Name = "1 Ton Weight",
-	Callback = function()
-      		equipweight2()
-  	end    
-})
-
-WTab:AddButton({
-	Name = "10 Ton Weight",
-	Callback = function()
-      		equipweight3()
-  	end    
-})
-
-WTab:AddButton({
-	Name = "100 Ton Weight",
-	Callback = function()
-      		equipweight4()
-  	end    
 })
 
 local TelTab = Window:MakeTab({
