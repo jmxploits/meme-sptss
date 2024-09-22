@@ -11,28 +11,52 @@ getgenv().PSV = true
 -- functions
 function WS()
     while WSV == true do
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"Add_MS_Request"})
+local args = {
+    [1] = {
+        [1] = "+MS1"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 wait(0.0000000000000000000000000000000000000000001)
     end
 end
 
 function FS()
     while FSV == true do
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"Add_FS_Request"})
+local args = {
+    [1] = {
+        [1] = "+FS1"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 wait(0.0000000000000000000000000000000000000000001)
     end
 end
 
 function BT()
     while BTV == true do
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"+BT1"})
+local args = {
+    [1] = {
+        [1] = "+BT1"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 wait(0.0000000000000000000000000000000000000000001)
     end
 end
 
 function JP()
     while JPV == true do
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"Add_JF_Request"})
+local args = {
+    [1] = {
+        [1] = "+JF1"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 wait(0.0000000000000000000000000000000000000000001)
     end
 end
@@ -59,13 +83,15 @@ game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"EquipWeight_Reques
 end
 
 function PS()
-    Weapon = "Meditate"
     while PSV == true do
-local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
-local location = CFrame.new(5729, 10827, 20931)
-wait(0.1)
-pl.CFrame = location
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))
+local args = {
+    [1] = {
+        [1] = "+PP1"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
   end
 end
 
